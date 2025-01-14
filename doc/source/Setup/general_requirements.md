@@ -6,6 +6,14 @@ For the **non expert users**, we provide guidelines in [Section Conda Setup](#2-
 
 If you are running the tutorials on the **Centre Blaise Pascal** (CBP), please follow the [dedicated instructions on this page](CBP.md).
 
+
+### 0. Download the ramses tutorials repository
+Open a new terminal and type the following:
+```
+git clone https://github.com/ramses-organisation/ramses-tutorials.git
+```
+This will create a new directory `ramses-tutorials` which contains the tutorials and environment specifications. 
+
 ## 1. List of Requirements 
 Here is a **list of all required packages**. More details are given below the list. 
 ```
@@ -109,12 +117,6 @@ conda update -n base conda
 
 **After this, close the terminal.**
 
-### 2.2. Download the ramses tutorials repository
-Open a new terminal and type the following:
-```
-git clone https://github.com/blaizot/ramses-tutorials.git
-```
-This will create a new directory `ramses-tutorials` which contains the tutorials and environment specifications. 
 
 ### 3. Install required python packages
 
