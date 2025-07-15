@@ -65,7 +65,7 @@ secondary_color = '#FFD587'
 
 html_theme = "sphinx_rtd_theme"
 html_theme_options = {
-    "repository_url": "https://github.com/blaizot/ramses-tutorials",
+    "repository_url": "https://github.com/ramses-organisation/ramses-tutorials",
     "repository_branch": "main",
     "use_repository_button": True,
     "use_issues_button": True,

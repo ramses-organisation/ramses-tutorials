@@ -78,8 +78,7 @@ On top of thes general packages we will use more astro-specific packages to visu
 ### libraries
 Some third-party codes used in the tutorials require the following libraries: 
 - FFTW, which should be installed from the [fftw website](http://www.fftw.org). 
-- GSL, which should be installed from the [GSL
-  website](lhttp://www.gnu.org/software/gsl/). 
+- GSL, which should be installed from the [GSL website](lhttp://www.gnu.org/software/gsl/). 
 - FFMPEG will be used to generate videos.
 
 
