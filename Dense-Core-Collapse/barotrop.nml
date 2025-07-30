@@ -1,0 +1,68 @@
+This namelist contains various input parameters for RAMSES runs
+
+&RUN_PARAMS  
+hydro=.true.
+poisson=.true.
+nrestart=0
+nremap=10
+nsubcycle=6*1,2
+/
+
+&AMR_PARAMS 
+levelmin=5
+levelmax=15
+ngridmax=1000000
+nexpand=2
+boxlen=1.         ! to be changed if alpha_dense_core changes in order to always have in code units the cloud radius r0=boxlen/4
+/
+
+&BOUNDARY_PARAMS
+/
+
+&INIT_PARAMS
+condinit_kind ='collapse'
+alpha_dense_core=0.35
+beta_dense_core=0.
+crit_dense_core=0.
+delta_rho=0.
+theta_mag=0.  
+/
+
+&OUTPUT_PARAMS
+foutput=50
+noutput=4
+tout=0,1,2,3
+/
+
+&POISSON_PARAMS 
+gravity_type=0
+epsilon=1d-4
+cg_levelmin=7
+/
+
+&HYDRO_PARAMS
+gamma=1.666667
+courant_factor=0.8
+slope_type=1
+scheme='muscl'
+riemann='llf'
+/
+
+&UNITS_PARAMS
+units_density= 3.83584509e-24      ! so that density in code units is equal to density in part/cc
+units_length= 3.0856776e+18        ! 1 pc in cm
+units_time= 1.9769994708456518e15  ! so that G=1 in code units
+/
+
+&COOLING_PARAMS
+barotropic_eos=.true.
+barotropic_eos_form='double_polytrope'
+polytrope_rho=1d-13 !g/cm3
+polytrope_index=1.666667
+T_eos=10d0
+mu_gas=2.31d0
+/
+
+&REFINE_PARAMS 
+jeans_refine=20*10.
+/
