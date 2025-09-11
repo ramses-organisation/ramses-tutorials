@@ -1,19 +1,19 @@
 # Guidelines to develop RAMSES tutorials
 
-## Style 
+## Style
 
-Python notebooks are handy for tutorials. Please make sure that your tutorial starts with a markdown cell containing the title of the tutorial after a single hash sign. For example 
+Python notebooks are handy for tutorials. Please make sure that your tutorial starts with a markdown cell containing the title of the tutorial after a single hash sign. For example
 ```
 # My New Tutorial
 ```
-Then you should use markdown cells to structure the tutorial into sections and sub-sections, starting with `##` for sections, `###` for sub-sections, etc. For example: 
+Then you should use markdown cells to structure the tutorial into sections and sub-sections, starting with `##` for sections, `###` for sub-sections, etc. For example:
 ```
-## 1. Pre-requisites 
-### 1.1. compiling RAMSES with the right options ... 
+## 1. Pre-requisites
+### 1.1. compiling RAMSES with the right options ...
 ```
-This will help the table of contents look good in the overall documentation. 
+This will help the table of contents look good in the overall documentation.
 
-Please, before pushing your tutorial to the common repo, make sure it works end-to-end. When you are happy with your tutorial, the best practice is to restart the kernel and clear all cells, then run cells one by one till the end, save the notebook, and commit this version. 
+Please, before pushing your tutorial to the common repo, make sure it works end-to-end. When you are happy with your tutorial, the best practice is to restart the kernel and clear all cells, then run cells one by one till the end, save the notebook, and commit this version.
 
 
 ## Turning your tutorial into documentation with sphinx
@@ -40,14 +40,14 @@ Once this is done you should run the following commnand:
 cd doc
 sphinx-build -M html source  build
 ```
-This will generate a the file `doc/build/html/index.html` that you can open in your browser to check the results. Please make sure your tutorial appears OK on this before you push your developments. 
+This will generate a the file `doc/build/html/index.html` that you can open in your browser to check the results. Please make sure your tutorial appears OK on this before you push your developments.
 
 You can also generate a pdf file using the following commnand:
 ```
 cd doc
 sphinx-build -M latexpdf source  build
 ```
-Again, please make sure this works before pushing. 
+Again, please make sure this works before pushing.
 
 ## Credits
 

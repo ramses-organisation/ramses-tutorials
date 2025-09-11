@@ -30,7 +30,7 @@ subroutine condinit(x,u,dx,nn)
   real(dp),dimension(1:nvector,1:nvar+3),save::q   ! Primitive variables
 
   ! UL added this 01/07/24
-  ! Line to add for rotation misalignment 
+  ! Line to add for rotation misalignment
   real(dp),dimension(1:3,1:3):: rot_M,rot_invM,rot_tilde
   real(dp):: theta_mag_radians
   id=1; iu=2; iv=3; iw=4; ip=5
@@ -52,7 +52,7 @@ subroutine condinit(x,u,dx,nn)
 
 
  ! UL added this 01/07/24
- ! Line to add for rotation misalignment 
+ ! Line to add for rotation misalignment
  if(theta_mag.eq.0.0d0) then
    theta_mag_radians= theta_mag/180.0d0*pi
    rot_M(1,1:3) = (/cos(theta_mag_radians),0.0d0,-sin(theta_mag_radians)/)
@@ -93,7 +93,7 @@ subroutine condinit(x,u,dx,nn)
 
 
        ! UL modified this 01/07/24
-       ! Line to add for rotation misalignment 
+       ! Line to add for rotation misalignment
        if(theta_mag.ne.0.0d0) then
          q(i,id) = d0*(1.0+delta_rho*cos(2.*atan(yy/xx)))!(2.0*(xx/rc)**2-1.0))
          q(i,iu) = omega0 * yy

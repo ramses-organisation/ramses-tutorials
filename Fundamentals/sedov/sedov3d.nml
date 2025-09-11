@@ -1,4 +1,4 @@
-&RUN_PARAMS 
+&RUN_PARAMS
 cosmo=.false.
 pic=.true.
 poisson=.false. ! No self-gravity
@@ -26,9 +26,9 @@ length_x=10.0, 0.
 length_y=10.0, 0.
 length_z=10.0, 0.
 exp_region=10.0, 0.
-d_region=1d-1, 0.	
-u_region=0.0, 0.0						
-v_region=0.0, 0.0     
+d_region=1d-1, 0.
+u_region=0.0, 0.0
+v_region=0.0, 0.0
 p_region= 8.6987186e-10, 8.57801264e-7	! 8 K and 10^51 ergs
 /
 
@@ -40,7 +40,7 @@ npartmax=500000
 boxlen=1                   ! 1 kpc
 /
 
-!&POISSON_PARAMS 
+!&POISSON_PARAMS
 !epsilon=1e-4
 !/
 

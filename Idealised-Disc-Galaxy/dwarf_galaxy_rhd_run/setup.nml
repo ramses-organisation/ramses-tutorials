@@ -1,4 +1,4 @@
-&RUN_PARAMS 
+&RUN_PARAMS
 cosmo=.false.
 pic=.true.
 poisson=.true.
@@ -25,13 +25,13 @@ initfile(1)='../ICs/dwarf_galaxy/'
 
 &AMR_PARAMS
 boxlen=50                 ! 50 kpc
-levelmin=7                ! 50 kpc / 2^7  = 390 pc resolution 
-levelmax=11               ! 50 kpc / 2^11 =  25 pc resolution             
+levelmin=7                ! 50 kpc / 2^7  = 390 pc resolution
+levelmax=11               ! 50 kpc / 2^11 =  25 pc resolution
 ngridmax=200000
 npartmax=1000000
 /
 
-!&POISSON_PARAMS 
+!&POISSON_PARAMS
 !epsilon=1e-4
 !/
 
@@ -114,7 +114,7 @@ ic_nfile=1                    ! If greater than one, look for files with name ma
 ic_ifout=1                    ! Change ramses output index for restarts
 ic_format='Gadget2'           ! Format of the initial conditions. 'Gadget1' or 'Gadget2'
 ic_center=0.0,0.0,0.0         ! Shift center parameter. ICs are automatically shifted with boxlen/2
-ic_scale_pos=1.0              ! Scaling factor for the position vector 
+ic_scale_pos=1.0              ! Scaling factor for the position vector
 ic_scale_vel=1.0              ! Scaling factor for the velocity vector
 ic_scale_mass=1.0             ! Scaling factor for the mass
 ic_scale_u=1.0                ! Scaling factor for the internal energy
@@ -142,9 +142,9 @@ ic_mag_const=0.0,0.0,0.0      ! Background magnetic field value for x,y,z compon
 ic_mag_center_x=0.0           ! x-coordinate of the magnetic field symmetry center
 ic_mag_center_y=0.0           ! y-coordinate of the magnetic field symmetry center
 ic_mag_center_z=0.0           ! z-coordinate of the magnetic field symmetry center
-ic_mag_axis_x=0.0             ! Magnetic field normal vector x-component 
-ic_mag_axis_y=0.0             ! Magnetic field normal vector y-component 
-ic_mag_axis_z=1.0             ! Magnetic field normal vector z-component 
+ic_mag_axis_x=0.0             ! Magnetic field normal vector x-component
+ic_mag_axis_y=0.0             ! Magnetic field normal vector y-component
+ic_mag_axis_z=1.0             ! Magnetic field normal vector z-component
 ic_mag_scale_R=1.0            ! Toroidal magnetic field scalelength
 ic_mag_scale_H=1.0            ! Toroidal magnetic field scaleheight
 ic_mag_scale_B=0.0            ! Foreground toroidal magnetic field value
@@ -168,7 +168,7 @@ accretion_scheme='bondi'    ! selects Bondi accretion as accretion mode
 eddington_limit=.true.      ! enables Eddington limit on accretion
 acc_sink_boost=-1           ! boosts accretion according to Booth&Schaye 2009
 boost_threshold_density=0.1 ! threshold density for boosting, typically the same as n_star; in H/cc
-bondi_use_vrel=.false.      ! excludes relative velocity between gas and sink from the accretion calculations 
+bondi_use_vrel=.false.      ! excludes relative velocity between gas and sink from the accretion calculations
 
 ! Merging
 mass_merger_vel_check=1e8   ! sum of sinks' masses for which velocities are checked upon merging to determine if the system is bound
@@ -184,10 +184,10 @@ kin_mass_loading=100.       ! mass loading factor of momentum feedback
 cone_opening=90.            ! opening angle of the cone in which momentum feedback is deposited (180. means full sphere)
 /
 
-&MOVIE_PARAMS 
-movie = .true. 
+&MOVIE_PARAMS
+movie = .true.
 tstartmov=0.0
-tendmov = 16.78 
+tendmov = 16.78
 imovout=200  ! 200 frames
 imov=1
 nw_frame=500 ! Movie frame resolution
@@ -208,4 +208,3 @@ phi_camera=          0.,        0.
 focal_camera=        50.,        50.
 dist_camera=         50.,        50.
 /
-
