@@ -5,15 +5,15 @@ Welcome to our tutorial repository for the RAMSES code. You will find
 here tutorials in which you will run and analyze a variety of advanced
 simulations. The tutorials will cover the installation of RAMSES and
 necessary tools, setting up the simulation parameters, running the
-simulations, and visualizing the outputs. 
+simulations, and visualizing the outputs.
 
 .. note::
   Before anything, you should make sure you install or load the
-  compilers and other python libraries you will need. Follow the 
+  compilers and other python libraries you will need. Follow the
   instructions in the **Setting up** section and in the tutorials.
 
 We recommend that the new users start with the **RAMSES Fundamentals**
-tutorial. 
+tutorial.
 
 .. toctree::
    :caption: Setting up
@@ -48,6 +48,3 @@ tutorial.
    :maxdepth: 1
 
    credits.rst
-
-
-   

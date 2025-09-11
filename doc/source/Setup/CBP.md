@@ -1,8 +1,8 @@
 # Instructions to get started on the CBP machines
 
-For the 1st edition of the RAMSES school, participants are hosted by the Centre Blaise Pascal ([CBP](http://www.cbp.ens-lyon.fr/doku.php?id=accueil:cbp)) and given access to individual desktop machines and to a more powerful cluster. 
+For the 1st edition of the RAMSES school, participants are hosted by the Centre Blaise Pascal ([CBP](http://www.cbp.ens-lyon.fr/doku.php?id=accueil:cbp)) and given access to individual desktop machines and to a more powerful cluster.
 
-These machines are provided with a number of installed softwares and libraries, but we will need a few extra things (python libraries) to go through the turorials. Please follow the instructions below in order to be able to execute the tutorials on the CBP servers. 
+These machines are provided with a number of installed softwares and libraries, but we will need a few extra things (python libraries) to go through the turorials. Please follow the instructions below in order to be able to execute the tutorials on the CBP servers.
 
 ## 1. Install miniconda
 
@@ -46,7 +46,7 @@ pip install osyris==2.11
 
 ## 4. Compiling third-party libraries
 
-Some tutorials will use extra codes in order to generate initial conditions for RAMSES experiments. Follow the instructions below to install them according to your needs. 
+Some tutorials will use extra codes in order to generate initial conditions for RAMSES experiments. Follow the instructions below to install them according to your needs.
 
 ### MUSIC (v2)
 In some tutorials (Cosmological-Volumes), we will use the code
@@ -76,5 +76,3 @@ cmake -DCMAKE_C_FLAGS=-fcommon ..
 make
 make install
 ```
-
-

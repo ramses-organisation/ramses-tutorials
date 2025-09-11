@@ -1,8 +1,8 @@
 # ramses-tutorials
 
-This repository contains tutorials that cover a number of applications of the RAMSES code. 
+This repository contains tutorials that cover a number of applications of the RAMSES code.
 
-You can browse all the tutorial material [at this link](https://ramses-tutorials.readthedocs.io/en/latest). 
+You can browse all the tutorial material [at this link](https://ramses-tutorials.readthedocs.io/en/latest).
 
 If you wish to run the tutorials, clone this ramses-tutorials repository:
 

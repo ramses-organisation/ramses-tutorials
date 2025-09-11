@@ -1,8 +1,8 @@
 # General setup requirements
 
-Running the RAMSES tutorials requires that a number of softwares be installed (compilers, python libraries, ...). We list these requirements in [Section Requirements](#1-list-of-requirements) and the expert users should make sure they have installed everything consistently. 
+Running the RAMSES tutorials requires that a number of softwares be installed (compilers, python libraries, ...). We list these requirements in [Section Requirements](#1-list-of-requirements) and the expert users should make sure they have installed everything consistently.
 
-For the **non expert users**, we provide guidelines in [Section Conda Setup](#2-conda-setup) to install all we need using a conda environment. 
+For the **non expert users**, we provide guidelines in [Section Conda Setup](#2-conda-setup) to install all we need using a conda environment.
 
 If you are running the tutorials on the **Centre Blaise Pascal** (CBP), please follow the [dedicated instructions on this page](CBP.md).
 
@@ -12,10 +12,10 @@ Open a new terminal and type the following:
 ```
 git clone https://github.com/ramses-organisation/ramses-tutorials.git
 ```
-This will create a new directory `ramses-tutorials` which contains the tutorials and environment specifications. 
+This will create a new directory `ramses-tutorials` which contains the tutorials and environment specifications.
 
-## 1. List of Requirements 
-Here is a **list of all required packages**. More details are given below the list. 
+## 1. List of Requirements
+Here is a **list of all required packages**. More details are given below the list.
 ```
 # general
 - git
@@ -23,12 +23,12 @@ Here is a **list of all required packages**. More details are given below the li
 - cmake
 
 # compilers
-- gfortran 
+- gfortran
 - gcc
 - gxx
 - openmpi
 
-# python 
+# python
 - python=3.12
 - pip
 - numpy
@@ -48,12 +48,12 @@ Here is a **list of all required packages**. More details are given below the li
 - ffmpeg
 ```
 
-### General environment 
-You will need `git` to download RAMSES and other codes used in the tutorials. Compilation will require using `make` (for RAMSES) and `cmake` for third-party codes. You should also install `pip` to be able to install python packages (see below). 
+### General environment
+You will need `git` to download RAMSES and other codes used in the tutorials. Compilation will require using `make` (for RAMSES) and `cmake` for third-party codes. You should also install `pip` to be able to install python packages (see below).
 
 ### Compilers
-You will need a **fortran compiler** to compile RAMSES, along with some version of **MPI** if you have access to multiple cores and want to run RAMSES in parallel. We recommend installing recent versions of the GNU fortran compiler [gfortran](https://gcc.gnu.org/fortran/) and [openmpi](https://www.open-mpi.org/). 
- 
+You will need a **fortran compiler** to compile RAMSES, along with some version of **MPI** if you have access to multiple cores and want to run RAMSES in parallel. We recommend installing recent versions of the GNU fortran compiler [gfortran](https://gcc.gnu.org/fortran/) and [openmpi](https://www.open-mpi.org/).
+
  For some third-party codes, you will also need recent versions of **C and C++ compilers** (at least C++14 compliant). We again recommend using [gcc/gxx](https://gcc.gnu.org/)
 
 ### python
@@ -66,7 +66,7 @@ The tutorials come in the form of python notebooks that the user can execute and
 - jupyter
 - scipy
 - f90nml
-``` 
+```
 On top of thes general packages we will use more astro-specific packages to visualize and analyze data. These are the following packages that can be installed with `pip`:
 ```
 - yt
@@ -76,13 +76,13 @@ On top of thes general packages we will use more astro-specific packages to visu
 ```
 
 ### libraries
-Some third-party codes used in the tutorials require the following libraries: 
-- FFTW, which should be installed from the [fftw website](https://www.fftw.org). 
-- GSL, which should be installed from the [GSL website](https://www.gnu.org/software/gsl/). 
+Some third-party codes used in the tutorials require the following libraries:
+- FFTW, which should be installed from the [fftw website](https://www.fftw.org).
+- GSL, which should be installed from the [GSL website](https://www.gnu.org/software/gsl/).
 - FFMPEG will be used to generate videos.
 
 
-## 2. Conda Setup 
+## 2. Conda Setup
 
 The instructions below have been tested to some extent but cause trouble on some recent Macs (with the M* chips).
 
@@ -129,7 +129,7 @@ conda activate ramses-env
 ```
 **Note that this has to be done in any new terminal.** (You may add this line to your .bashrc file if you are familiar with this, so that you don't have to type in the command each time you open a new terminal).  
 
-Once you activate the conda environment `ramses-env` in a terminal, all packages listed in the file `ramses-tutorials/doc/source/Setup/ramses-environment.yml` become available. You can have a look at this file and edit it if need be. 
+Once you activate the conda environment `ramses-env` in a terminal, all packages listed in the file `ramses-tutorials/doc/source/Setup/ramses-environment.yml` become available. You can have a look at this file and edit it if need be.
 
 Finish the installation with some additional packages best installed with pip by running the following commands:
 ```
@@ -139,7 +139,7 @@ pip install osyris==2.11
 ```
 ### 2.4. Compiling third-party libraries
 
-Some tutorials will use extra codes in order to generate initial conditions for RAMSES experiments. Follow the instructions below to install them according to your needs. 
+Some tutorials will use extra codes in order to generate initial conditions for RAMSES experiments. Follow the instructions below to install them according to your needs.
 
 #### MUSIC (v2)
 In some tutorials (Cosmological-Volumes), we will use the code
@@ -169,5 +169,3 @@ cmake -DCMAKE_C_FLAGS=-fcommon ..
 make
 make install
 ```
-
-

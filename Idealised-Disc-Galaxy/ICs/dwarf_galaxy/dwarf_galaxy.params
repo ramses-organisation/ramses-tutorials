@@ -8,11 +8,11 @@ v200 				0
 m200				1   # 1 * 10^10 Msun
 # Halo spin parameter
 lambda		 	        0.04
-# Refinement level of the potential grid 
+# Refinement level of the potential grid
 level_coarse		    	7
-# Refinement level of the plane plane density grid 
+# Refinement level of the plane plane density grid
 level_grid_mid_dens		6
-# Refinement level of the turbulence grid 
+# Refinement level of the turbulence grid
 level_grid_turb		    	6
 # Refinement level of the gaussian field grid
 level_grid_dens_fluct 		6
@@ -61,7 +61,7 @@ part_mass_pot1			1e5
 # 5  = Plummer profile
 # 6  = Jaffe profile
 # 7  = Isothermal profile
-# 8  = NFW profile 
+# 8  = NFW profile
 # 9  = Burkert
 # 10 = Einasto profile
 # 11 = Mestel profile
@@ -81,7 +81,7 @@ rcore1				0.
 concentration1		    	13.0
 # Gravitational softening for the poisson solver [kpc]
 softening1                      0.6
-# Component 1 radial density cut [kpc] 
+# Component 1 radial density cut [kpc]
 cut1			        0.
 # Component 1 thickness parameters
 flatx1			        1.00
@@ -113,7 +113,7 @@ jeans_dim1			1
 # Method for streaming velocity computation
 # 0 =               - User defined fixed fraction of the circular velocity profile (stream_fraction keyword)
 # 1 = Bullock 2001  - Streaming velocity profile following the cumulative mass profile
-# 2 = Springel 1999 - Streaming velocity profile following is a fixed fraction of the rotation curve 
+# 2 = Springel 1999 - Streaming velocity profile following is a fixed fraction of the rotation curve
 # 3 =               - Solid Body rotation
 stream_method1			1
 # Alpha coefficient for the generalized normal distribution [Gaussian=2.0]
