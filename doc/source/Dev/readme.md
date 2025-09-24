@@ -19,7 +19,7 @@ Please, before pushing your tutorial to the common repo, make sure it works end-
 ## Turning your tutorial into documentation with sphinx
 
 Each tutorial is in the form of a notebook within a directory, for example `Cosmological-Volumes/tutorial.ipynb`. The global documentation consists of all the tutorials listed in the file `doc/source/index.rst`. If you create a new tutorial `MyNewTutorial/tutorial.ipynb`, you should first add a symbolic link of your tutorial's directory into the `doc/source` directory:
-```
+```bash
 cd doc/source
 ln -s ../../MyNewTutorial .
 ```
@@ -31,19 +31,19 @@ Then you should edit the file `doc/source/index.rst` to insert a line in the lis
 ```
 
 In order to generate the documentation on your side, before committing and pushing to github, you should first install the required sphinx packages:
-```
+```bash
 cd doc
 pip install -r rtd_requirements.txt
 ```
 Once this is done you should run the following commnand:
-```
+```bash
 cd doc
 sphinx-build -M html source  build
 ```
 This will generate a the file `doc/build/html/index.html` that you can open in your browser to check the results. Please make sure your tutorial appears OK on this before you push your developments.
 
 You can also generate a pdf file using the following commnand:
-```
+```bash
 cd doc
 sphinx-build -M latexpdf source  build
 ```

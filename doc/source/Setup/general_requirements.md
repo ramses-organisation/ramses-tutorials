@@ -9,7 +9,7 @@ If you are running the tutorials on the **Centre Blaise Pascal** (CBP), please f
 
 ### 0. Download the ramses tutorials repository
 Open a new terminal and type the following:
-```
+```bash
 git clone https://github.com/ramses-organisation/ramses-tutorials.git
 ```
 This will create a new directory `ramses-tutorials` which contains the tutorials and environment specifications.
@@ -93,7 +93,7 @@ e.g. the quick command line install at the bottom of the page: select
 your OS and copy paste the commands into a terminal.)
 
 For example, with **MacOS**, run the following commands in a terminal:
-```
+```bash
 mkdir -p ~/miniconda3
 curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o ~/miniconda3/miniconda.sh
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
@@ -104,7 +104,7 @@ conda update -n base conda
 ```
 
 Or on **Linux**, run these commands in a terminal:
-```
+```bash
 mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
@@ -120,11 +120,11 @@ conda update -n base conda
 ### 3. Install required python packages
 
 In order to install all the packages we need, type the following:
-```
+```bash
 conda env create -f ramses-tutorials/doc/source/Setup/ramses-environment.yml
 ```
 Now, the conda environment for the ramses tutorials is created, as you can see by typing `conda env list`. In order to **use** the ramses environment, you have to **activate** it by running following command:
-```
+```bash
 conda activate ramses-env
 ```
 **Note that this has to be done in any new terminal.** (You may add this line to your .bashrc file if you are familiar with this, so that you don't have to type in the command each time you open a new terminal).  
@@ -132,7 +132,7 @@ conda activate ramses-env
 Once you activate the conda environment `ramses-env` in a terminal, all packages listed in the file `ramses-tutorials/doc/source/Setup/ramses-environment.yml` become available. You can have a look at this file and edit it if need be.
 
 Finish the installation with some additional packages best installed with pip by running the following commands:
-```
+```bash
 pip install yt_astro_analysis
 pip install colossus
 pip install osyris==2.11
@@ -144,7 +144,7 @@ Some tutorials will use extra codes in order to generate initial conditions for 
 #### MUSIC (v2)
 In some tutorials (Cosmological-Volumes), we will use the code
 MUSIC (v2). Install MUSIC2 as follows, in some terminal:
-```
+```bash
 git clone https://github.com/cosmo-sims/MUSIC2.git
 cd MUSIC2
 mkdir build
@@ -154,13 +154,13 @@ ccmake ..
 This last command will open an interactive session where you need to
 enter `c` to start the configuration, `e` to exit the log, `c` again, and then `g` to generate the Makefile. Once this is done
 successfully, type:
-```
+```bash
 make -j
 ```
 
 #### DICE
 Some tutorials (e.g. Idealised galaxies) will use [DICE](https://bitbucket.org/vperret/dice/src/master/). Install this by running the following lines in a terminal.
-```
+```bash
 git clone https://bitbucket.org/vperret/dice
 cd dice
 mkdir build
@@ -169,3 +169,4 @@ cmake -DCMAKE_C_FLAGS=-fcommon ..
 make
 make install
 ```
+With recent versions of CMake, it can happen that the installer complains that the "policy version" is too flexible. In that case, you can follow the suggested solution and add `-DCMAKE_POLICY_VERSION_MINIMUM=3.5` to the `cmake` call.
