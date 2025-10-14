@@ -21,6 +21,7 @@ tutorial.
 
    Setup/general_requirements.md
    Setup/CBP.md
+   Setup/Infinity.md
 
 .. toctree::
    :caption: Tutorials
