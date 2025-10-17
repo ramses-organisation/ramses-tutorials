@@ -4,6 +4,13 @@ For the 2nd edition of the RAMSES school, participants are hosted by the Institu
 
 Special instructions are required to properly set up the dependencies needed to run the tutorials on Infinity.
 
+For the 2025 school, you should work in the following folder
+```bash
+cd /data79/RamsesTrainingScratch
+mkdir $USER
+cd $USER
+```
+
 ## Setting up a conda environment
 Install conda (to have a working version of Python), need only be done once
 ```bash
@@ -12,10 +19,10 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init bash
-conda update -n base conda
 ```
 After this, close the terminal and login again. Then, create a new environment (i.e., an installation of a given version of Python)
 ```bash
+conda update -n base conda
 conda create -n ramses-env python=3.13
 ```
 
@@ -33,7 +40,7 @@ python --version  # should be Python 3.13.7 (as of 6 October)
 This step only needs to be done once. Make sure you're in the ramses-env environment (see above).
 
 ```bash
-pip install numpy astropy matplotlib jupyter scipy f90nml yt yt_astro_analysis colossus osyris==3
+pip install numpy astropy matplotlib jupyter scipy f90nml yt yt_astro_analysis colossus osyris
 ```
 
 ## Compiling DICE and MUSIC and RAMSES
@@ -160,7 +167,9 @@ We can now create a script to submit jupyterlab jobs. On infinity, create a new 
 ```bash
 #!/bin/bash
 #SBATCH --job-name=Jupyterlab
-#SBATCH -n 1
+#SBATCH -n 128
+#SBATCH --exclusive
+#SBATCH --reservation=RamsesTraining
 #SBATCH --time 24:00:00
 #SBATCH -o notebook.log
 #SBATCH -e notebook.err
