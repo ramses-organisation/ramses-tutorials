@@ -47,6 +47,8 @@ Follow instructions to compile DICE and MUSIC (https://ramses-tutorials.readthed
 The recommended compiler on Infinity is the Intel compiler, which is provided by Stéphane Rouberol. To use it, load the corresponding module
 ```bash
 module load inteloneapi/2025.2.1
+# The following is also required for some tutorial, think about loading it!
+module load fftw
 ```
 As any module, you will need to load it each time you want to compile and/or run RAMSES.
 
@@ -164,6 +166,9 @@ We can now create a script to submit jupyterlab jobs. On infinity, create a new 
 #SBATCH -e notebook.err
 
 NOTEBOOKPORT=<RANDOM_NUMBER>
+
+module load inteloneapi/2025.2.1
+module load fftw
 
 set -x
 
