@@ -7,14 +7,14 @@ For the **non expert users**, we provide guidelines in [Section Conda Setup](#2-
 If you are running the tutorials on the **Centre Blaise Pascal** (CBP), please follow the [dedicated instructions on this page](CBP.md).
 
 
-### 0. Download the ramses tutorials repository
+### Download the ramses tutorials repository
 Open a new terminal and type the following:
 ```bash
 git clone https://github.com/ramses-organisation/ramses-tutorials.git
 ```
 This will create a new directory `ramses-tutorials` which contains the tutorials and environment specifications.
 
-## 1. List of Requirements
+## List of Requirements
 Here is a **list of all required packages**. More details are given below the list.
 ```
 # general
@@ -82,11 +82,11 @@ Some third-party codes used in the tutorials require the following libraries:
 - FFMPEG will be used to generate videos.
 
 
-## 2. Conda Setup
+## Conda Setup
 
 The instructions below have been tested to some extent but cause trouble on some recent Macs (with the M* chips).
 
-### 2.1. install miniconda
+### Install miniconda
 Install miniconda by following instructions provided on their website
 [https://docs.anaconda.com/miniconda](https://docs.anaconda.com/miniconda). (See
 e.g. the quick command line install at the bottom of the page: select
@@ -117,7 +117,7 @@ conda update -n base conda
 **After this, close the terminal.**
 
 
-### 3. Install required python packages
+### Install required python packages
 
 In order to install all the packages we need, type the following:
 ```bash
@@ -137,7 +137,7 @@ pip install yt_astro_analysis
 pip install colossus
 pip install osyris==2.11
 ```
-### 2.4. Compiling third-party libraries
+### Compiling third-party libraries
 
 Some tutorials will use extra codes in order to generate initial conditions for RAMSES experiments. Follow the instructions below to install them according to your needs.
 
