@@ -66,7 +66,7 @@ cd ramses
 ```
 
 Now to compile RAMSES:
-1. edit `bin/Makefile` to replace `ifort` with `ifx` in the filename,
+1. edit `bin/Makefile` to replace `ifort` with `ifx`,
 2. change directory to `bin/`,
 3. and invoke the `make` command with the following arguments:
    ```bash
