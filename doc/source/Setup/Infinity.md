@@ -124,11 +124,11 @@ Take a note of that number, we will call it `<RANDOM_NUMBER>` in the following.
 Create an SSH tunnel from your laptop to Infinity
 ```bash
 ping -c 2 -s 999 infinity02.iap.fr
-ssh -L<RANDOM_NUMBER>:localhost:<RANDOM_NUMBER> user@infinity02.iap.fr
+ssh -L <RANDOM_NUMBER>:localhost:<RANDOM_NUMBER> user@infinity02.iap.fr
 ```
 This is the step `[ localhost:PORT1 ] -> [ login_node:PORT2 ]` above, with `PORT1 = PORT2 = RANDOM_NUMBER`.
 
-You can automatize this process by adding the following lines to your `~/.ssh/config` file on your laptop:
+You can automatize (on Linux/Mac) this process by adding the following lines to your `~/.ssh/config` file on your laptop:
 ```
 Host infinity
      LocalForward <RANDOM_NUMBER> localhost:<RANDOM_NUMBER>
