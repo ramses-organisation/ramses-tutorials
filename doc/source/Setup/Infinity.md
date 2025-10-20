@@ -177,7 +177,7 @@ We can now create a script to submit jupyterlab jobs. On infinity, create a new 
 NOTEBOOKPORT=<RANDOM_NUMBER>
 
 module load inteloneapi/2025.2.1
-module load fftw
+module load fftw2
 
 set -x
 
@@ -188,7 +188,7 @@ pkill jupyter-lab
 cd $SLURM_SUBMIT_DIR
 # setup reverse SSH tunnel between computing and login node
 # this is the step [ login_node:PORT2 ] ------> [ compute_node:PORT3 ], with PORT2 = PORT3 = RANDOM_NUMBER
-ssh -N -f -R $NOTEBOOKPORT:localhost:$NOTEBOOKPORT $SLURM_SUBMIT_HOST
+ssh -i ~/.ssh/<name_of_the_key_you_typed_above> -N -f -R $NOTEBOOKPORT:localhost:$NOTEBOOKPORT $SLURM_SUBMIT_HOST
 
 # launch the notebook, listening on the forwarded port
 ~/miniconda3/envs/ramses-env/bin/jupyter lab --port=$NOTEBOOKPORT --no-browser
