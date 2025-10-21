@@ -178,6 +178,7 @@ NOTEBOOKPORT=<RANDOM_NUMBER>
 
 module load inteloneapi/2025.2.1
 module load fftw2
+module load ffmpeg
 
 set -x
 
