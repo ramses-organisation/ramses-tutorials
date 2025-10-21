@@ -55,7 +55,7 @@ The recommended compiler on Infinity is the Intel compiler, which is provided by
 ```bash
 module load inteloneapi/2025.2.1
 # The following is also required for some tutorial, think about loading it!
-module load fftw
+module load fftw2
 ```
 As any module, you will need to load it each time you want to compile and/or run RAMSES.
 
