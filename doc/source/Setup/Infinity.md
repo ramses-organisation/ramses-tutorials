@@ -204,3 +204,13 @@ sbatch ~/submit_notebook.sh
 If everything goes well, it should create a tunnel between the compute node and the login node.
 
 The file `notebook.err` should contain a string with the URL that you should access, e.g. `http://127.0.0.1:1<RANDOM_PORT>/lab?token=<SOME_LONG_STRING>` which you can open on your local machine in your favorite browser (Firefox/Chrome/~~Netscape~~).
+
+
+If you need to stop your script (or any other), you can:
+```bash
+# Identify what the job id is
+squeue -u $USER
+
+# Then cancel it
+scancel <JOB_ID>
+```
