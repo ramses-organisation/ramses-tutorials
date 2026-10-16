@@ -22,6 +22,7 @@ tutorial.
    Setup/general_requirements.md
    Setup/CBP.md
    Setup/Infinity.md
+   Setup/Strasbourg.md
 
 .. toctree::
    :caption: Tutorials
