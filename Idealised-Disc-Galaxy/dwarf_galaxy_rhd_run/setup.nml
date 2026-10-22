@@ -72,7 +72,7 @@ t_sne=3.                        ! Stellar particle age at which to go SN, in Myr
 /
 
 &HYDRO_PARAMS
-gamma=1.4
+gamma=1.666666667
 courant_factor=0.8
 slope_type=1
 pressure_fix=.true.
