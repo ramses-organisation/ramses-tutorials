@@ -64,3 +64,20 @@ turb_Ndt=100       ! Number of timesteps per autocorr. time
 turb_rms=5.094074502271999      ! rms turbulent forcing acceleration
 turb_min_rho=2.5470372511355715d-6 ! Minimum density for turbulence
 /
+
+&MOVIE_PARAMS
+movie=.true.
+imov=0
+tendmov=1.0            ! movie end time = run end time
+imovout=60            ! number of movie frames
+nw_frame=256
+nh_frame=256
+xcentre_frame=2.,0.,0.,0.   ! box centre (boxlen=4)
+ycentre_frame=2.,0.,0.,0.
+zcentre_frame=2.,0.,0.,0.
+deltax_frame=4.,0.          ! full box
+deltay_frame=4.,0.
+deltaz_frame=4.,0.
+proj_axis='z'
+movie_vars_txt='dens'
+/
