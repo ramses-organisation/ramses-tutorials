@@ -33,6 +33,7 @@ tutorial.
    Idealised-Disc-Galaxy/tuto_disc.ipynb
    Forced-Turbulence/tutorial_forced_turbulence.ipynb
    Dense-Core-Collapse/dense-core.ipynb
+   Zoom-Simulation/tutorial_zoom.ipynb
 
 .. note::
    You are welcome and encouraged to create new tutorials and share
