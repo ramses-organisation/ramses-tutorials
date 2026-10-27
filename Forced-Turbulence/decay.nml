@@ -1,0 +1,65 @@
+! Decaying turbulence: start from a turbulent velocity field, NO driving.
+! The turbulence then decays freely. Based on tests/turb/decaying, with frequent
+! outputs (foutput) so we can follow the decay in time.
+
+&RUN_PARAMS
+hydro=.true.
+/
+
+&AMR_PARAMS
+levelmin=6
+levelmax=6
+ngridmax=500000
+boxlen=4
+/
+
+&HYDRO_PARAMS
+gamma=1.666667
+courant_factor=0.8
+scheme='muscl'
+slope_type=1
+riemann='hllc'
+pressure_fix=.true.
+beta_fix=0.5
+/
+
+&INIT_PARAMS
+nregion=1
+region_type='square'
+x_center=2
+y_center=2
+z_center=2
+length_x=4
+length_y=4
+length_z=4
+exp_region=10
+d_region=0.28954719470909174
+p_region=0.030361026190591216
+/
+
+&OUTPUT_PARAMS
+tend=2.0           ! eddy turnover time ~ boxlen/vrms ~ 4.6, so t=2 shows clear decay
+foutput=2          ! write a snapshot every 2 coarse steps (~30 snapshots)
+/
+
+&UNITS_PARAMS
+units_density=1.50492957435d-20
+units_time=3.1556926d13
+units_length=3.0857d18
+/
+
+&COOLING_PARAMS
+barotropic_eos=.true.
+barotropic_eos_form='isothermal'
+T_eos=4.2194
+/
+
+&TURB_PARAMS
+driven_turb=.false.                  ! no driving -> turbulence decays freely
+initial_turb=.true.                  ! start from a turbulent velocity field
+turb_seed=1
+initial_turb_vrms=0.8660254037844386 ! initial |v|_rms; cs=0.324 -> Mach ~2.7
+initial_turb_spectrum='power_law'
+initial_turb_comp_frac=0.5           ! compressive fraction of the initial field
+turb_min_rho=2.5470372511355715d-6
+/
